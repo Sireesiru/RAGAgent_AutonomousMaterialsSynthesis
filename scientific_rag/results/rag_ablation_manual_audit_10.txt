@@ -1,0 +1,384 @@
+RAG ABLATION MANUAL AUDIT
+================================================================================
+Random sample: 10/50 questions
+Random seed: 42
+
+================================================================================
+AUDIT ITEM 1
+Question ID: Q41
+================================================================================
+
+QUESTION:
+What biological process mediated by Gtf-driven EPS biosynthesis allows S. mutans biofilms to influence the behavior of oral H. pylori?
+
+REFERENCE / GOLD ANSWER:
+S. mutans biofilms mediate the adhesion, colonisation, and antibiotic tolerance of oral H. pylori.
+
+GEMMA-ONLY ANSWER:
+The biological process is **quorum sensing (QS)**.
+
+In *Streptococcus mutans*, the Gtf-driven production of extracellular polysaccharides (EPS) facilitates the formation of a biofilm matrix. This matrix acts as a physical scaffold and a chemical reservoir that promotes the accumulation of signaling molecules. These signals facilitate interspecies communication, which influences the behavior and gene expression of *Helicobacter pylori* within the shared biofilm environment.
+
+GEMMA-ONLY SCORES:
+  Correctness:       1/4
+  Completeness:      1/4
+  Unsupported claims: 4/4
+  Overall:           1/4
+
+RAG + GEMMA ANSWER:
+The biological process mediated by Gtf-driven EPS biosynthesis that allows *S. mutans* biofilms to influence the behavior of *H. pylori* is the production of **exopolysaccharides (EPS)**.
+
+The presence of Gtfs (specifically GtfB and GtfC) is essential for EPS production and biofilm matrix formation. The resulting EPS content modulates the **adhesion, colonization, and morphology** of *H. pylori* within the *S. mutans* biofilm.
+
+RAG + GEMMA SCORES:
+  Correctness:       3/4
+  Completeness:      3/4
+  Unsupported claims: 1/4
+  Overall:           3/4
+
+BLINDED JUDGE WINNER: RAG + GEMMA
+JUDGE REASON:
+Answer A correctly identifies the effects (adhesion, colonization) mentioned in the reference, though it adds a minor detail about morphology. Answer B introduces 'quorum sensing' as the primary process, which is not mentioned in the reference and is an unsupported scientific claim.
+
+
+================================================================================
+AUDIT ITEM 2
+Question ID: Q08
+================================================================================
+
+QUESTION:
+What are the specific limitations of electron microscopy and fluorescence microscopy when used to study cell development?
+
+REFERENCE / GOLD ANSWER:
+Electron microscopy can disclose structural layout and macromolecular arrangement but cannot directly follow dynamics in living cells; fluorescence microscopy can follow dynamics but requires labeling and lacks spatial resolution.
+
+GEMMA-ONLY ANSWER:
+The specific limitations of electron microscopy (EM) and fluorescence microscopy in studying cell development are as follows:
+
+**Electron Microscopy (EM)**
+*   **Sample Preparation:** EM requires extensive sample fixation, dehydration, and often heavy-metal staining or resin embedding. This process can introduce artifacts and may alter the native state of the cell.
+*   **Static Imaging:** EM provides a "snapshot" in time. It cannot capture dynamic processes or real-time movements of organelles or proteins during development.
+*   **Sample Viability:** The preparation process typically kills the cells, making it impossible to observe live biological processes.
+*   **Field of View:** The high magnification required for high resolution results in a very small field of view, making it difficult to observe large-scale tissue organization or systemic developmental changes.
+
+**Fluorescence Microscopy**
+*   **Phototoxicity and Photobleaching:** High-intensity light can damage living cells (phototoxicity) or cause the fluorescent markers to fade (photobleaching), limiting the duration of live-cell imaging.
+*   **Specificity and Labeling:** Accuracy depends on the specificity of the fluorophores. Non-specific binding or the requirement for genetic modification (e.g., GFP tagging) can alter the behavior or expression of the proteins being studied.
+*   **Resolution Limits:** Standard fluorescence microscopy is limited by the diffraction limit of light (approximately 200–300 nm), which may be insufficient to resolve small sub-cellular structures compared to EM.
+*   **Autofluorescence:** Natural molecules in some tissues can emit light, potentially interfering with the signal from the intended fluorophores.
+
+GEMMA-ONLY SCORES:
+  Correctness:       3/4
+  Completeness:      3/4
+  Unsupported claims: 3/4
+  Overall:           2/4
+
+RAG + GEMMA ANSWER:
+Based on the provided literature, the specific limitations of these techniques when used to study cell development are as follows:
+
+*   **Electron Microscopy (EM):** It is difficult to identify specific target structures on grayscale electron micrographs.
+*   **Fluorescence Microscopy (FM):** Standard sample preparation for EM (chemical fixation, heavy metal staining, dehydration, and resin embedding) involves harsh treatments that have a detrimental effect on the preservation of fluorescence.
+
+The text suggests that these limitations can be addressed by using correlative light and electron microscopy (CLEM) or by using cryofixation, which preserves the sample in a vitrified hydrated state compatible with fluorescence microscopy.
+
+RAG + GEMMA SCORES:
+  Correctness:       2/4
+  Completeness:      1/4
+  Unsupported claims: 2/4
+  Overall:           1/4
+
+BLINDED JUDGE WINNER: GEMMA ONLY
+JUDGE REASON:
+Answer A correctly identifies the core trade-off mentioned in the reference (EM's lack of dynamics vs. Fluorescence's lack of resolution). While it includes several unsupported details (like phototoxicity and field of view), it captures the essence of the comparison better than Answer B. Answer B incorrectly frames the limitation of Fluorescence Microscopy as a failure of EM preparation to preserve fluorescence, which is not the limitation stated in the reference.
+
+
+================================================================================
+AUDIT ITEM 3
+Question ID: Q02
+================================================================================
+
+QUESTION:
+What analytical method was used to investigate the mechanisms of antibacterial killing synergy between polymyxin B and synthetic cannabidiol against A. baumannii ATCC 19606?
+
+REFERENCE / GOLD ANSWER:
+untargeted metabolomics
+
+GEMMA-ONLY ANSWER:
+The analytical method used to investigate the mechanisms of antibacterial killing synergy between polymyxin B and synthetic cannabidiol against *A. baumannii* ATCC 19606 was **transmission electron microscopy (TEM)**.
+
+GEMMA-ONLY SCORES:
+  Correctness:       0/4
+  Completeness:      0/4
+  Unsupported claims: 4/4
+  Overall:           0/4
+
+RAG + GEMMA ANSWER:
+The analytical method used to investigate the mechanisms of antibacterial killing synergy between polymyxin B and synthetic cannabidiol against *A. baumannii* ATCC 19606 was untargeted metabolomics (specifically utilizing liquid chromatography–mass spectrometry, or LC–MS).
+
+RAG + GEMMA SCORES:
+  Correctness:       4/4
+  Completeness:      4/4
+  Unsupported claims: 1/4
+  Overall:           4/4
+
+BLINDED JUDGE WINNER: RAG + GEMMA
+JUDGE REASON:
+Answer A provides an entirely incorrect method (TEM). Answer B correctly identifies 'untargeted metabolomics' as the method. While Answer B adds specific technical details (LC-MS) not in the reference, it is still the only answer that contains the correct information.
+
+
+================================================================================
+AUDIT ITEM 4
+Question ID: Q18
+================================================================================
+
+QUESTION:
+Which specific types of microscopy technologies were compared to evaluate their suitability for visualizing synaptic components in larger parts of the brain?
+
+REFERENCE / GOLD ANSWER:
+The technologies included stereo, widefield, deconvolution, confocal, and super-resolution set-ups.
+
+GEMMA-ONLY ANSWER:
+The specific types of microscopy technologies typically compared for visualizing synaptic components in larger brain regions are **two-photon microscopy** and **confocal microscopy**.
+
+In many studies, these are compared to evaluate their trade-offs regarding imaging depth, spatial resolution, and the ability to image deep within thick tissue samples while maintaining high-resolution visualization of synaptic structures.
+
+GEMMA-ONLY SCORES:
+  Correctness:       2/4
+  Completeness:      1/4
+  Unsupported claims: 2/4
+  Overall:           2/4
+
+RAG + GEMMA ANSWER:
+The specific types of microscopy technologies compared to evaluate their suitability for visualizing synaptic components in larger parts of the brain included:
+
+*   Stereo
+*   Widefield
+*   Widefield-deconvolution
+*   Point scanning conventional and sub-Airy pinhole-sized confocal
+*   Spinning disc confocal
+*   Airyscan
+*   Structured illumination (SIM)
+*   Stimulated emission depletion (STED)
+*   Super-resolution set-ups
+
+RAG + GEMMA SCORES:
+  Correctness:       3/4
+  Completeness:      4/4
+  Unsupported claims: 2/4
+  Overall:           3/4
+
+BLINDED JUDGE WINNER: RAG + GEMMA
+JUDGE REASON:
+Answer A includes all the categories mentioned in the reference (stereo, widefield, deconvolution, confocal, and super-resolution), although it breaks them down into more specific sub-types. Answer B misses the specific list provided in the reference and introduces 'two-photon microscopy', which is not in the reference.
+
+
+================================================================================
+AUDIT ITEM 5
+Question ID: Q16
+================================================================================
+
+QUESTION:
+What principle was used to perform the non-rigid registration of the 3D datasets for the analysis of the joint histogram?
+
+REFERENCE / GOLD ANSWER:
+The 3D datasets were non-rigidly registered using the classical maximization of mutual information (MI) principle.
+
+GEMMA-ONLY ANSWER:
+The information provided is insufficient to determine the specific principle used for non-rigid registration, as the specific study or dataset was not identified in your request.
+
+GEMMA-ONLY SCORES:
+  Correctness:       0/4
+  Completeness:      0/4
+  Unsupported claims: 0/4
+  Overall:           0/4
+
+RAG + GEMMA ANSWER:
+The non-rigid registration of the 3D datasets for the analysis of the joint histogram was performed using the classical maximization of mutual information (MI) principle.
+
+RAG + GEMMA SCORES:
+  Correctness:       4/4
+  Completeness:      4/4
+  Unsupported claims: 0/4
+  Overall:           4/4
+
+BLINDED JUDGE WINNER: RAG + GEMMA
+JUDGE REASON:
+Answer A is perfectly consistent with the reference answer, providing the exact principle mentioned. Answer B fails to provide the information contained in the reference.
+
+
+================================================================================
+AUDIT ITEM 6
+Question ID: Q15
+================================================================================
+
+QUESTION:
+What specific biological structure can be imaged in a live and growing biofilm by incorporating a site-specifically incorporated Uaa into a protein?
+
+REFERENCE / GOLD ANSWER:
+The P. aeruginosa flagellum.
+
+GEMMA-ONLY ANSWER:
+The specific biological structure that can be imaged is the **protein** itself (or the specific protein domain containing the site-specifically incorporated non-canonical amino acid, or Uaa).
+
+By incorporating a Uaa that serves as a substrate for "click" chemistry or other bioorthogonal labeling, researchers can covalently attach fluorophores or other tags to a specific protein of interest within a live, growing biofilm. This allows for the visualization of the protein's localization, distribution, and dynamics in situ.
+
+GEMMA-ONLY SCORES:
+  Correctness:       1/4
+  Completeness:      1/4
+  Unsupported claims: 3/4
+  Overall:           1/4
+
+RAG + GEMMA ANSWER:
+The specific biological structure that can be imaged in a live and growing biofilm by incorporating a site-specifically incorporated Uaa into a protein is the **flagella** (specifically of *P. aeruginosa*).
+
+RAG + GEMMA SCORES:
+  Correctness:       4/4
+  Completeness:      4/4
+  Unsupported claims: 0/4
+  Overall:           4/4
+
+BLINDED JUDGE WINNER: RAG + GEMMA
+JUDGE REASON:
+Answer A correctly identifies the specific structure mentioned in the reference (the P. aeruginosa flagellum). Answer B incorrectly identifies the 'protein' as the structure being imaged and includes significant unsupported information regarding click chemistry and localization.
+
+
+================================================================================
+AUDIT ITEM 7
+Question ID: Q09
+================================================================================
+
+QUESTION:
+What are the specific imaging parameters used to capture the high-resolution tiled image of the grid in the SEM?
+
+REFERENCE / GOLD ANSWER:
+A 4,096 × 4,096 image size, a 2 nm pixel, and a 1 µs dwell time.
+
+GEMMA-ONLY ANSWER:
+The specific imaging parameters used to capture the high-resolution tiled image of the grid cannot be determined from the available information.
+
+GEMMA-ONLY SCORES:
+  Correctness:       0/4
+  Completeness:      0/4
+  Unsupported claims: 0/4
+  Overall:           0/4
+
+RAG + GEMMA ANSWER:
+The provided literature does not contain information regarding the specific imaging parameters used to capture a "high-resolution tiled image of the grid" in the SEM.
+
+While Passage 1 describes parameters for cryoFIB/SEM imaging (such as 2.30 kV acceleration potential, 50 pA probe current, and 18 nm pixel size) and Passage 2 mentions the use of a Field Emission SEM for imaging gold nanoparticles, neither text specifies the parameters for a "tiled image of the grid."
+
+RAG + GEMMA SCORES:
+  Correctness:       0/4
+  Completeness:      0/4
+  Unsupported claims: 1/4
+  Overall:           0/4
+
+BLINDED JUDGE WINNER: GEMMA ONLY
+JUDGE REASON:
+Both answers fail to provide the correct information from the reference (4,096 x 4,096 size, 2 nm pixel, 1 µs dwell time). However, Answer A is a standard 'not found' response, whereas Answer B includes specific details from other passages that are incorrect/irrelevant to the specific question asked, making it less clean than A, even though both are ultimately incorrect.
+
+
+================================================================================
+AUDIT ITEM 8
+Question ID: Q07
+================================================================================
+
+QUESTION:
+How is the threshold for image binarization determined in the provided LM images?
+
+REFERENCE / GOLD ANSWER:
+The threshold for binarization is determined using the maximum entropy method, which identifies the threshold value that results in the highest sum of entropies for the two pixel classes.
+
+GEMMA-ONLY ANSWER:
+The provided information does not contain any images or specific technical documentation regarding "LM images" to determine how the binarization threshold is set. Therefore, the answer cannot be determined from the available information.
+
+GEMMA-ONLY SCORES:
+  Correctness:       0/4
+  Completeness:      0/4
+  Unsupported claims: 0/4
+  Overall:           0/4
+
+RAG + GEMMA ANSWER:
+The threshold for image binarization in the LM (light microscopy) images is determined using the maximum entropy method. This method identifies the threshold value that results in the highest sum of entropies calculated for the two pixel classes (background and object), thereby optimizing the classification of pixels.
+
+RAG + GEMMA SCORES:
+  Correctness:       4/4
+  Completeness:      4/4
+  Unsupported claims: 0/4
+  Overall:           4/4
+
+BLINDED JUDGE WINNER: RAG + GEMMA
+JUDGE REASON:
+Answer A correctly identifies the maximum entropy method and the specific mechanism (highest sum of entropies for the two pixel classes) as described in the reference. Answer B fails to provide the information contained in the reference.
+
+
+================================================================================
+AUDIT ITEM 9
+Question ID: Q35
+================================================================================
+
+QUESTION:
+What specific structures are observed in the orthogonal views of the region of interest (ROI)?
+
+REFERENCE / GOLD ANSWER:
+The orthogonal views show the active osteoblast layer with the mitochondrial network, the ice surface (in the reflection channel), and the mitochondria in the posterior epithelial cell layer.
+
+GEMMA-ONLY ANSWER:
+To provide a specific answer, the relevant image, figure, or experimental data must be provided. Without the accompanying scientific text or visual data, the specific structures in the region of interest (ROI) cannot be determined.
+
+GEMMA-ONLY SCORES:
+  Correctness:       0/4
+  Completeness:      0/4
+  Unsupported claims: 0/4
+  Overall:           0/4
+
+RAG + GEMMA ANSWER:
+In the orthogonal views of the region of interest (ROI), the following structures are observed:
+*   The active osteoblast layer with the mitochondrial network.
+*   The ice surface (observed in the reflection channel).
+*   Mitochondria in the posterior epithelial cell layer.
+
+RAG + GEMMA SCORES:
+  Correctness:       4/4
+  Completeness:      4/4
+  Unsupported claims: 0/4
+  Overall:           4/4
+
+BLINDED JUDGE WINNER: RAG + GEMMA
+JUDGE REASON:
+Answer B perfectly matches the reference answer, providing all three specific structures mentioned. Answer A fails to provide any information from the reference.
+
+
+================================================================================
+AUDIT ITEM 10
+Question ID: Q06
+================================================================================
+
+QUESTION:
+What specific detector and mode were used to record the FTIR spectra of the samples in suspension?
+
+REFERENCE / GOLD ANSWER:
+The spectra were recorded using a liquid N2-cooled MCT (cadmium–mercury telluride) detector in the mode of Attenuated total reflection (ATR).
+
+GEMMA-ONLY ANSWER:
+The provided information is insufficient to determine the specific detector and mode used to record the FTIR spectra of the samples in suspension.
+
+GEMMA-ONLY SCORES:
+  Correctness:       0/4
+  Completeness:      0/4
+  Unsupported claims: 0/4
+  Overall:           0/4
+
+RAG + GEMMA ANSWER:
+The FTIR spectra of the samples in suspension were recorded using a liquid N2-cooled MCT (cadmium–mercury telluride) detector in the mode of Attenuated total reflection (ATR).
+
+RAG + GEMMA SCORES:
+  Correctness:       4/4
+  Completeness:      4/4
+  Unsupported claims: 0/4
+  Overall:           4/4
+
+BLINDED JUDGE WINNER: RAG + GEMMA
+JUDGE REASON:
+Answer A perfectly matches the reference answer, providing both the specific detector (liquid N2-cooled MCT) and the mode (ATR). Answer B incorrectly claims the information is insufficient.
+

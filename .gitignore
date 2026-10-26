@@ -15,3 +15,12 @@ venv*
 __pycache__/
 temp*
 
+
+# Scientific RAG generated artifacts
+scientific_rag/scientific_kb/
+scientific_rag/scientific_kb_sfr/
+*.index
+*.pkl
+*.pdf
+scientific_rag/rag_env/
+scientific_rag/__pycache__/

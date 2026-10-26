@@ -1,0 +1,11 @@
+metric,mean,ci_95_lower,ci_95_upper,n_queries
+Gold-Paper-Hit@1,0.7,0.58,0.82,50
+Gold-Paper-Hit@3,0.86,0.76,0.94,50
+Gold-Paper-Hit@5,0.86,0.76,0.94,50
+Gold-Paper-MRR@5,0.7733333333333333,0.6666666666666667,0.87,50
+Gold-Chunk-Hit@1,0.34,0.2,0.48,50
+Gold-Chunk-Hit@3,0.5,0.36,0.64,50
+Gold-Chunk-Hit@5,0.56,0.42,0.7,50
+Gold-Chunk-MRR@5,0.42066666666666663,0.2973333333333333,0.5440166666666665,50
+Unique-Sources@5,3.56,3.14,3.98,50
+Source-Diversity@5,0.7119999999999999,0.628,0.7959999999999999,50
